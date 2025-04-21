@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BasicTodoList.API.props" />
+</Project>

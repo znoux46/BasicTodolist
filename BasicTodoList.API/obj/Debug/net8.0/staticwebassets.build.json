@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "eGicn8UArdojqwP7FKGh4gD59R9yZK6/RZI5xaykfPg=",
+  "Source": "BasicTodoList.API",
+  "BasePath": "_content/BasicTodoList.API",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
