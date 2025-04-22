@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{86FBB9C4-C16E-45B7-90CA-DD2594CFFE9D}|BasicTodoList.API\\BasicTodoList.API.csproj|solutionrelative:basictodolist.api\\controllers\\todocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{86FBB9C4-C16E-45B7-90CA-DD2594CFFE9D}|BasicTodoList.API\\BasicTodoList.API.csproj|c:\\users\\znoux\\documents\\basictodolist\\basictodolist.api\\data\\tododbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86FBB9C4-C16E-45B7-90CA-DD2594CFFE9D}|BasicTodoList.API\\BasicTodoList.API.csproj|solutionrelative:basictodolist.api\\data\\tododbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{86FBB9C4-C16E-45B7-90CA-DD2594CFFE9D}|BasicTodoList.API\\BasicTodoList.API.csproj|c:\\users\\znoux\\documents\\basictodolist\\basictodolist.api\\models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{86FBB9C4-C16E-45B7-90CA-DD2594CFFE9D}|BasicTodoList.API\\BasicTodoList.API.csproj|solutionrelative:basictodolist.api\\models\\todoitem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -15,8 +19,8 @@
       "RelativeMoniker": "D:0:0:{86FBB9C4-C16E-45B7-90CA-DD2594CFFE9D}|BasicTodoList.API\\BasicTodoList.API.csproj|solutionrelative:basictodolist.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{86FBB9C4-C16E-45B7-90CA-DD2594CFFE9D}|BasicTodoList.API\\BasicTodoList.API.csproj|c:\\users\\znoux\\documents\\basictodolist\\basictodolist.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{86FBB9C4-C16E-45B7-90CA-DD2594CFFE9D}|BasicTodoList.API\\BasicTodoList.API.csproj|solutionrelative:basictodolist.api\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{86FBB9C4-C16E-45B7-90CA-DD2594CFFE9D}|BasicTodoList.API\\BasicTodoList.API.csproj|c:\\users\\znoux\\documents\\basictodolist\\basictodolist.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{86FBB9C4-C16E-45B7-90CA-DD2594CFFE9D}|BasicTodoList.API\\BasicTodoList.API.csproj|solutionrelative:basictodolist.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,8 +30,47 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TodoDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Znoux\\Documents\\BasicTodoList\\BasicTodoList.API\\Data\\TodoDbContext.cs",
+              "RelativeDocumentMoniker": "BasicTodoList.API\\Data\\TodoDbContext.cs",
+              "ToolTip": "C:\\Users\\Znoux\\Documents\\BasicTodoList\\BasicTodoList.API\\Data\\TodoDbContext.cs",
+              "RelativeToolTip": "BasicTodoList.API\\Data\\TodoDbContext.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T07:27:28.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Znoux\\Documents\\BasicTodolist\\BasicTodoList.API\\Program.cs",
+              "RelativeDocumentMoniker": "BasicTodoList.API\\Program.cs",
+              "ToolTip": "C:\\Users\\Znoux\\Documents\\BasicTodolist\\BasicTodoList.API\\Program.cs",
+              "RelativeToolTip": "BasicTodoList.API\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T03:53:38.73Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "TodoItem.cs",
+              "DocumentMoniker": "C:\\Users\\Znoux\\Documents\\BasicTodolist\\BasicTodoList.API\\Models\\TodoItem.cs",
+              "RelativeDocumentMoniker": "BasicTodoList.API\\Models\\TodoItem.cs",
+              "ToolTip": "C:\\Users\\Znoux\\Documents\\BasicTodolist\\BasicTodoList.API\\Models\\TodoItem.cs",
+              "RelativeToolTip": "BasicTodoList.API\\Models\\TodoItem.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-04-21T04:12:01.062Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -36,48 +79,22 @@
               "RelativeDocumentMoniker": "BasicTodoList.API\\Controllers\\TodoController.cs",
               "ToolTip": "C:\\Users\\Znoux\\Documents\\BasicTodolist\\BasicTodoList.API\\Controllers\\TodoController.cs",
               "RelativeToolTip": "BasicTodoList.API\\Controllers\\TodoController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGYAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAFUAAAAAAAAAAAAiwB0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-04-21T04:13:09.287Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "TodoItem.cs",
-              "DocumentMoniker": "C:\\Users\\Znoux\\Documents\\BasicTodolist\\BasicTodoList.API\\Models\\TodoItem.cs",
-              "RelativeDocumentMoniker": "BasicTodoList.API\\Models\\TodoItem.cs",
-              "ToolTip": "C:\\Users\\Znoux\\Documents\\BasicTodolist\\BasicTodoList.API\\Models\\TodoItem.cs",
-              "RelativeToolTip": "BasicTodoList.API\\Models\\TodoItem.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T04:12:01.062Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Znoux\\Documents\\BasicTodolist\\BasicTodoList.API\\Program.cs",
-              "RelativeDocumentMoniker": "BasicTodoList.API\\Program.cs",
-              "ToolTip": "C:\\Users\\Znoux\\Documents\\BasicTodolist\\BasicTodoList.API\\Program.cs",
-              "RelativeToolTip": "BasicTodoList.API\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T03:53:38.73Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "WeatherForecast.cs",
-              "DocumentMoniker": "C:\\Users\\Znoux\\Documents\\BasicTodolist\\BasicTodoList.API\\WeatherForecast.cs",
-              "RelativeDocumentMoniker": "BasicTodoList.API\\WeatherForecast.cs",
-              "ToolTip": "C:\\Users\\Znoux\\Documents\\BasicTodolist\\BasicTodoList.API\\WeatherForecast.cs",
-              "RelativeToolTip": "BasicTodoList.API\\WeatherForecast.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-04-21T03:53:37.375Z",
+              "DocumentIndex": 4,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\Znoux\\Documents\\BasicTodolist\\BasicTodoList.API\\appsettings.json",
+              "RelativeDocumentMoniker": "BasicTodoList.API\\appsettings.json",
+              "ToolTip": "C:\\Users\\Znoux\\Documents\\BasicTodolist\\BasicTodoList.API\\appsettings.json",
+              "RelativeToolTip": "BasicTodoList.API\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-04-21T07:26:27.726Z",
               "EditorCaption": ""
             }
           ]

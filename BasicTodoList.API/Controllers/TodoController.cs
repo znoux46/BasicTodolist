@@ -1,5 +1,9 @@
-﻿using BasicTodoList.API.Models;
+﻿using System.Threading.Tasks;
+using BasicTodoList.API.Data;
+using BasicTodoList.API.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
 
 namespace BasicTodoList.API.Controllers
 {
@@ -10,21 +14,31 @@ namespace BasicTodoList.API.Controllers
     [Route("api/[controller]")] // Route mặc định: api/todo
     public class TodoController : ControllerBase
     {
-        // Danh sách tạm thời lưu trong bộ nhớ (thay cho database trong ví dụ đơn giản)
-        private static List<TodoItem> _todos = new List<TodoItem>();
+        //// Danh sách tạm thời lưu trong bộ nhớ (thay cho database trong ví dụ đơn giản)
+        //private static List<TodoItem> _todos = new List<TodoItem>();
 
-        // Biến đếm để tự động tăng ID
-        private static int _nextId = 1;
+        //// Biến đếm để tự động tăng ID
+        //private static int _nextId = 1;
+
+        private readonly TodoDbContext _context;
+
+        public TodoController(TodoDbContext context)
+        {
+            _context = context;
+        }
+
 
         /// <summary>
         /// Lấy tất cả các mục công việc
         /// </summary>
         /// <returns>Danh sách các mục công việc</returns>
         [HttpGet]
-        public IActionResult GetAll()
+        public async Task<IActionResult> GetAll()
         {
+            var todos = await _context.Todos.ToListAsync();
+
             // Trả về HTTP 200 OK với danh sách todos
-            return Ok(_todos);
+            return Ok(todos);
         }
 
         /// <summary>
@@ -33,10 +47,10 @@ namespace BasicTodoList.API.Controllers
         /// <param name="id">ID của mục công việc cần lấy</param>
         /// <returns>Mục công việc tìm thấy hoặc NotFound nếu không tồn tại</returns>
         [HttpGet("{id}")]
-        public IActionResult GetById(int id)
+        public async Task<IActionResult> GetById(int id)
         {
             // Tìm todo item có ID trùng khớp
-            var todo = _todos.FirstOrDefault(t => t.Id == id);
+            var todo = await _context.Todos.FindAsync(id);
 
             // Nếu không tìm thấy, trả về HTTP 404 Not Found
             if (todo == null) return NotFound();
@@ -51,13 +65,16 @@ namespace BasicTodoList.API.Controllers
         /// <param name="todo">Đối tượng mục công việc mới</param>
         /// <returns>Thông tin mục công việc vừa tạo kèm link để xem chi tiết</returns>
         [HttpPost]
-        public IActionResult Create(TodoItem todo)
+        public async Task<IActionResult> Create(TodoItem todo)
         {
-            // Gán ID mới (tự động tăng)
-            todo.Id = _nextId++;
+            //// Gán ID mới (tự động tăng)
+            //todo.Id = _nextId++;
 
-            // Thêm vào danh sách
-            _todos.Add(todo);
+            //// Thêm vào danh sách
+            //_todos.Add(todo);
+
+            await _context.Todos.AddAsync(todo);
+            await _context.SaveChangesAsync();
 
             // Trả về HTTP 201 Created với link để xem item vừa tạo
             return CreatedAtAction(nameof(GetById), new { id = todo.Id }, todo);
@@ -70,18 +87,16 @@ namespace BasicTodoList.API.Controllers
         /// <param name="updatedTodo">Đối tượng mới với thông tin cập nhật</param>
         /// <returns>NoContent nếu thành công hoặc NotFound nếu không tìm thấy</returns>
         [HttpPut("{id}")]
-        public IActionResult Update(int id, TodoItem updatedTodo)
+        public async Task<IActionResult> Update(int id, TodoItem updatedTodo)
         {
-            // Tìm todo item cần cập nhật
-            var existingTodo = _todos.FirstOrDefault(t => t.Id == id);
-
-            // Nếu không tìm thấy, trả về HTTP 404 Not Found
+            var existingTodo = await _context.Todos.FindAsync(id);
             if (existingTodo == null) return NotFound();
 
-            // Cập nhật thông tin
             existingTodo.Task = updatedTodo.Task;
             existingTodo.IsCompleted = updatedTodo.IsCompleted;
+            existingTodo.UpdatedDate = DateTime.UtcNow;
 
+            await _context.SaveChangesAsync();
             // Trả về HTTP 204 No Content (thành công nhưng không có nội dung trả về)
             return NoContent();
         }
@@ -92,18 +107,13 @@ namespace BasicTodoList.API.Controllers
         /// <param name="id">ID của mục cần xóa</param>
         /// <returns>NoContent nếu thành công hoặc NotFound nếu không tìm thấy</returns>
         [HttpDelete("{id}")]
-        public IActionResult Delete(int id)
+        public async Task<IActionResult> Delete(int id)
         {
-            // Tìm todo item cần xóa
-            var todo = _todos.FirstOrDefault(t => t.Id == id);
-
-            // Nếu không tìm thấy, trả về HTTP 404 Not Found
+            var todo = await _context.Todos.FindAsync(id);
             if (todo == null) return NotFound();
 
-            // Xóa khỏi danh sách
-            _todos.Remove(todo);
-
-            // Trả về HTTP 204 No Content
+            _context.Todos.Remove(todo);
+            await _context.SaveChangesAsync();
             return NoContent();
         }
     }

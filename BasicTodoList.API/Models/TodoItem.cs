@@ -2,9 +2,10 @@
 {
     public class TodoItem
     {
-        // TodoItem Entity
         public int Id { get; set; }
-        public string? Task { get; set; }
+        public string Task { get; set; } = string.Empty;
         public bool IsCompleted { get; set; }
+        public DateTime CreatedDate { get; set; } = DateTime.UtcNow;
+        public DateTime? UpdatedDate { get; set; }
     }
 }
